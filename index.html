@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-book"></i> Libraria</h1>
+            <p>Discover your next great read</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search by title, author, genre...">
+                <button id="search-button"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+        
+        <div id="loading" class="loading hidden">
+            <div class="skeleton-grid">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </div>
+        
+        <div id="error-message" class="error hidden">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Sorry, we couldn't load the books. Please try again.</p>
+        </div>
+        
+        <div id="results"></div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Book Search Library. Powered by Google Books API.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
